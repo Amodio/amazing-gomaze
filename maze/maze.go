@@ -1,6 +1,6 @@
-// File     maze.go
-// Author   Jacques Boscq <jacques@boscq.fr>
-// Date     07 nov. 2012 02:28 +0100
+// File maze.go
+// Copyright 2012 Jacques Boscq <jacques@boscq.fr>. Under GPL3, see COPYING.
+// Date 07 nov. 2012 02:28 +0100
 
 // Package gomaze implements methods for manipulating a maze
 package gomaze
