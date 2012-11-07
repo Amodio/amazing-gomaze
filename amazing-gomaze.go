@@ -1,6 +1,5 @@
 // File main.go
-// Copyright 2012 Jacques Boscq <jacques@boscq.fr>. Under GPL3, see COPYING.
-// Date 07 nov. 2012 02:32 +0100
+// © 2012 Jacques Boscq <jacques@boscq.fr>. Under GPL3, see COPYING.
 
 package main
 
