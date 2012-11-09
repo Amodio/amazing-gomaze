@@ -37,11 +37,11 @@ const DimensionMax = 70
 func NewMaze(height, width int) (*Maze, error) {
     if width <= 0 || height <= 0 {
         return nil, fmt.Errorf("Non-strictly positive dimensions (%d, %d) are illegal",
-        height, width)
+            height, width)
     }
     if width > DimensionMax || height > DimensionMax {
         return nil, fmt.Errorf("Dimensions (%d, %d) exceed the limit (%d)",
-        height, width, DimensionMax)
+            height, width, DimensionMax)
     }
 
     // init. the cells

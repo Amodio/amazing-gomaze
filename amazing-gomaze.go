@@ -1,4 +1,4 @@
-// File main.go
+// File amazing-gomaze.go
 // © 2012 Jacques Boscq <jacques@boscq.fr>. Under GPL3, see COPYING.
 
 package main

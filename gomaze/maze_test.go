@@ -1,4 +1,4 @@
-// File maze/maze_test.go
+// File gomaze/maze_test.go
 // © 2012 Jacques Boscq <jacques@boscq.fr>. Under GPL3, see COPYING.
 // Creation date 09 nov. 2012 01:25 +0100
 
@@ -7,7 +7,7 @@ package gomaze
 import "testing"
 
 func TestNewMaze(t *testing.T) {
-    invalid_dimensions := [...]int{ DimensionMax + 1, 0, -1, -1337 }
+    invalid_dimensions := [...]int{DimensionMax + 1, 0, -1, -1337}
     for _, d := range invalid_dimensions {
         _, err := NewMaze(d, d)
         if err == nil {
@@ -17,7 +17,7 @@ func TestNewMaze(t *testing.T) {
 }
 
 func TestNewSquaredMaze(t *testing.T) {
-    invalid_dimensions := [...]int{ DimensionMax + 1, 0, -1, -1337 }
+    invalid_dimensions := [...]int{DimensionMax + 1, 0, -1, -1337}
     for _, d := range invalid_dimensions {
         _, err := NewSquaredMaze(d)
         if err == nil {
@@ -36,7 +36,7 @@ func TestNewTarjan(t *testing.T) {
     if tarjan == nil {
         t.Fatalf("newTarjan() failed")
     }
-    if len(tarjan.RemainingCells) != n * n {
+    if len(tarjan.RemainingCells) != n*n {
         t.Fatalf("newTarjan() failed: %d != %d", len(tarjan.RemainingCells), n)
     }
 }
@@ -51,6 +51,7 @@ func BenchmarkGenerateMaze(b *testing.B) {
     }
     m.Generate()
 }
+
 /*
  * Remaining functions to test:
 
