@@ -6,7 +6,7 @@ package main
 import (
     "flag"
     "fmt"
-    maze "github.com/Amodio/amazing-gomaze/maze"
+    "github.com/Amodio/amazing-gomaze/gomaze"
     "math/rand"
     "time"
 )
@@ -17,9 +17,10 @@ func main() {
     flag.Parse()
     rand.Seed(time.Now().UnixNano())
 
-    b := maze.NewSquaredMaze(*dimension)
-    b.Generate()
-    fmt.Println(b)
+    if b, err := gomaze.NewSquaredMaze(*dimension); err == nil {
+        b.Generate()
+        fmt.Println(b)
+    }
 
     /*
        d := NewMaze(9, 50)

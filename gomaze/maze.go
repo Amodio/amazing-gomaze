@@ -1,4 +1,4 @@
-// File maze.go
+// File gomaze/maze.go
 // © 2012 Jacques Boscq <jacques@boscq.fr>. Under GPL3, see COPYING.
 
 // Package gomaze implements methods for manipulating a maze
@@ -31,12 +31,17 @@ type Tarjan struct {
     cells [][]int
 }
 
-const DimensionMax = 50
+const DimensionMax = 70
 
 // Return a new Maze (partially) initialized
-func NewMaze(height, width int) *Maze {
-    if width <= 0 || height <= 0 || width > DimensionMax || height > DimensionMax {
-        panic("Invalid dimensions for the Maze!")
+func NewMaze(height, width int) (*Maze, error) {
+    if width <= 0 || height <= 0 {
+        return nil, fmt.Errorf("Non-strictly positive dimensions (%d, %d) are illegal",
+        height, width)
+    }
+    if width > DimensionMax || height > DimensionMax {
+        return nil, fmt.Errorf("Dimensions (%d, %d) exceed the limit (%d)",
+        height, width, DimensionMax)
     }
 
     // init. the cells
@@ -53,11 +58,11 @@ func NewMaze(height, width int) *Maze {
         width,
         height,
         cells,
-    }
+    }, nil
 }
 
 // Return a new SquaredMaze (partially) initialized
-func NewSquaredMaze(n int) *Maze {
+func NewSquaredMaze(n int) (*Maze, error) {
     return NewMaze(n, n)
 }
 

@@ -22,3 +22,8 @@ Printing a Maze of 10x10 cells.
      |_  |  _|_  | | | | |
      |                   |
       ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+
+Test suite
+==========
+
+You can launch the test suite by running the `check.sh` script.
