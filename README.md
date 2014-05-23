@@ -27,3 +27,5 @@ Test suite
 ==========
 
 You can launch the test suite by running the `check.sh` script.
+
+[![Build Status](https://drone.io/github.com/Amodio/amazing-gomaze/status.png)](https://drone.io/github.com/Amodio/amazing-gomaze/latest)
